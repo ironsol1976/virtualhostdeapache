@@ -1,0 +1,12 @@
+sudo apt-get update
+sudo apt-get install apache2
+sudo mkdir -p /var/www/html/geekytheory.com
+sudo mkdir -p /var/www/html/geekyjuegos.com
+sudo chown -R $USER:$USER /var/www/html/geekytheory.com
+sudo chown -R $USER:$USER /var/www/html/geekyjuegos.com
+sudo chmod -R 755 /var/www/html
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/geekytheory.com.conf
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/geekyjuegos.com.conf
+sudo a2ensite geekytheory.com.conf
+sudo a2ensite geekyjuegos.com.conf
+history ˃ /sistoptrabajo/historialapache2.txt
